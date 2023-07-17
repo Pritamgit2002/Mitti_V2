@@ -8,7 +8,7 @@ const About = () => {
     <div>
       <div className="mt-5">
         <div className="text-[40px] font-semibold flex justify-center">
-          About Us
+          Who Are We
         </div>
         <p className="flex justify-center font-semibold text-gray-500 mt-2">
           Order now and appricate thy beauty of nature.
