@@ -6,7 +6,7 @@ import Link from "next/link";
 const Category = () => {
   return (
     <div>
-      <div className="">
+      <div className="ml-2">
         <div className="text-[40px] font-semibold flex justify-center">
           Category
         </div>
