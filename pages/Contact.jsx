@@ -106,4 +106,8 @@ export default Contact;
 //   );
 // };
 
+<<<<<<< HEAD
 // export default Contact;
+=======
+// export default Contact;
+>>>>>>> 354ab39eda693e59c5923363351b12666d2cd7c1
