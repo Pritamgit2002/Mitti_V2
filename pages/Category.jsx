@@ -19,39 +19,47 @@ const Category = () => {
         {/* <div className="bg-blue-300 h-96"></div> */}
         <div class=" md:grid grid-rows-3 grid-flow-col gap-28 justify-center pb-5 cursor-pointer ">
           <div class="row-end-3 row-span-2 flex  items-center justify-center pb-10 flex-col">
-            <Image
-              src="/pic4.jpg"
-              height={300}
-              width={300}
-              className="object-fill rounded-xl shadow-xl shadow-amber-600 	"
-            />
-            <div className="mt-5 font-bold text-xl">Rajasthani Design</div>
+            <Link href="Product">
+              <Image
+                src="/pic4.jpg"
+                height={300}
+                width={300}
+                className="object-fill rounded-xl shadow-xl shadow-amber-600 	"
+              />
+              <div className="mt-5 font-bold text-xl">Rajasthani Design</div>
+            </Link>
           </div>
 
           <div class="row-start-2 row-end-4 flex items-center justify-center pb-10 flex-col">
-            <Image
-              src="/pic2.jpg"
-              height={300}
-              width={300}
-              className="object-fill rounded-xl shadow-xl shadow-yellow-600"
-            />
-            <div className="mt-5 font-bold text-xl">Ceramic Potery</div>
+            <Link href="Product">
+              <Image
+                src="/pic2.jpg"
+                height={300}
+                width={300}
+                className="object-fill rounded-xl shadow-xl shadow-yellow-600"
+              />
+              <div className="mt-5 font-bold text-xl">Ceramic Potery</div>
+            </Link>
           </div>
 
           <div class="row-end-3 row-span-2 flex items-center justify-center pb-10 flex-col">
-            <Image
-              src="/pic3.jpg"
-              height={300}
-              width={300}
-              className="object-fill rounded-xl shadow-xl shadow-blue-600"
-            />
-            <div className="mt-5 font-bold text-xl">Home accessories</div>
+            <Link href="Product">
+              <Image
+                src="/pic3.jpg"
+                height={300}
+                width={300}
+                className="object-fill rounded-xl shadow-xl shadow-blue-600"
+              />
+              <div className="mt-5 font-bold text-xl">Home accessories</div>
+            </Link>
           </div>
         </div>
 
         <div className="flex items-center justify-center flex-col pb-8">
-          <div className="my-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-          <button className="bg-white rounded-xl p-4 flex font-semibold items-center justify-between gap-3 cursor-pointer border-2 border-blue-200 hover:bg-blue-200 transition-colors hover:shadow-2xl shadow-blue-900">
+          <div className="my-4 text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+          <button className="bg-white rounded-xl p-4 flex font-semibold items-center justify-between gap-3 cursor-pointer border-2 border-blue-300 bg-blue-100/80 hover:bg-blue-300 transition-colors hover:shadow-2xl shadow-gray-900">
             <Link href="/"></Link>
             <div className="font-bold">Explore</div>
 
