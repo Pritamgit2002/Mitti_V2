@@ -8,8 +8,8 @@ const Footer = () => {
           <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
               <a href="/" class="flex items-center">
-                <img src='' class="h-10 mr-3" alt="Mittimaker Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap ">
+                {/* <img src='' class="h-10 mr-3" alt="Mittimaker Logo" /> */}
+                <span class="self-center text-2xl font-semibold whitespace-nowrap font-roboto">
                   Mittimaker
                 </span>
               </a>

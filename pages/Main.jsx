@@ -4,6 +4,14 @@ import { FcRight } from "react-icons/fc";
 import Link from "next/link";
 import BsPlus from "react-icons/bs";
 import dynamic from "next/dynamic";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import slide_1 from "../public/slide_1.jpg";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import pic2 from "../public/pic2.jpg";
 
 const DynamicIcon = dynamic(
   () => import("react-icons/bs").then((mod) => mod.BsPlus),
@@ -11,10 +19,11 @@ const DynamicIcon = dynamic(
     ssr: false,
   }
 );
+
 const Main = () => {
   return (
-    <div className="mx-16 lg:mx-52 flex-col justify-center lg:mt-8">
-      <div className="bg-[#C1DCDC] rounded-2xl font-normal lg:flex ">
+    <div className="mx-16 lg:mx-52 flex-col justify-center lg:mt-8 ">
+      {/* <div className="bg-[#C1DCDC] rounded-2xl font-normal lg:flex ">
         <div className="px-4 flex items-center h-[500px] text-[15px] font-semibold lg:w-[50%]">
           <spam className="font-extrabold text-[50px]">
             Buy Your Dream Pottery Items
@@ -40,7 +49,128 @@ const Main = () => {
             className="absolute bottom-0 right-0 lg:scale-105"
           />
         </div>
-      </div>
+      </div> */}
+
+      <Swiper
+        modules={[Pagination, Navigation, Autoplay]}
+        slidesPerView={1}
+        navigation
+        autoplay={{
+          delay: 1000,
+        }}
+        loop={true}
+        className="cursor-pointer h-[400px] lg:h-[600px] rounded-[35px] bg-red-200 shadow-xl shadow-gray-400 "
+        pagination={{ clickable: true }}
+      >
+        <div className="flex items-center justify-center ">
+          <SwiperSlide>
+            <div className="relative h-full">
+              <img
+                src="https://images.unsplash.com/photo-1488977678660-dca8681ca872?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                height={100}
+                width={200}
+                alt="htf"
+                className="w-full h-full shadow-xl shadow-gray-500"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <h2 class="text-5xl font-bold">Timeless Treasures</h2>
+                  <p class="text-lg mt-2">
+                    Discover the Beauty of Handcrafted Pottery."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative h-full">
+              <img
+                src="https://images.pexels.com/photos/4992831/pexels-photo-4992831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                height={100}
+                width={200}
+                alt="htf"
+                className="h-full w-full shadow-2xl shadow-gray-500"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <h2 class="text-5xl font-bold">Elevate Every Dish</h2>
+                  <p class="text-lg mt-2">
+                    Unleash Elegance with Our Dining Pottery Collection.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative h-full">
+              <img
+                src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1269&q=80"
+                height={100}
+                width={200}
+                alt="htf"
+                className="h-full w-full shadow-2xl shadow-gray-500"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <h2 class="text-5xl font-bold">Go Green, Spend Smart</h2>
+                  <p class="text-lg mt-2">
+                    Embrace Earth-Friendly Pottery Delight.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img
+              src="https://images.unsplash.com/photo-1632819506620-cc0f984af43a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+              height={100}
+              width={200}
+              alt="trfdtrd"
+              className="h-full w-full shadow-2xl shadow-gray-500"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative h-full">
+              <img
+                src="https://images.unsplash.com/photo-1628281321655-060c5fb662a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80"
+                height={100}
+                width={200}
+                alt="trfdtrd"
+                className="h-full w-full shadow-2xl shadow-gray-500"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <h2 class="text-5xl font-bold">Crafted with Love</h2>
+                  <p class="text-lg mt-2 text-green-200">
+                    Own a Piece of Artistry with Our Handmade Pottery.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative h-full">
+              <img
+                src="https://images.unsplash.com/photo-1481401908818-600b7a676c0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+                height={100}
+                width={200}
+                alt="trfdtrd"
+                className="h-full w-full shadow-2xl shadow-gray-500"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <h2 class="text-5xl font-bold">The Ceramic Beauty!</h2>
+                  <p class="text-lg mt-2 text-slate-200">
+                    Embrace Elegance: Elevate Your Space with Exquisite Ceramic
+                    Creations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </div>
+      </Swiper>
 
       {/* <div className=" lg:flex md:flex-2 gap-14 justify-center">
           <div className=" bg-cyan-200 h-80 w-72 ml-10 rounded-3xl my-8"></div>
@@ -69,15 +199,15 @@ const Main = () => {
           </button>
         </div>
 
-        <div >
+        <div>
           <div className="  rounded-3xl my-8">
-              <Image
-                src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                height={100}
-                width={200}
-                alt="htf"
-                className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
-              />           
+            <Image
+              src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+              height={100}
+              width={200}
+              alt="htf"
+              className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
+            />
             <div className="pt-5 text-start text-[18px] font-medium font-poppins mx-5">
               Ceramic Tea Set
             </div>
@@ -87,15 +217,15 @@ const Main = () => {
           </div>
         </div>
 
-        <div >
+        <div>
           <div className="  rounded-3xl my-8">
-              <Image
-                src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                height={100}
-                width={200}
-                alt="htf"
-                className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
-              />           
+            <Image
+              src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+              height={100}
+              width={200}
+              alt="htf"
+              className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
+            />
             <div className="pt-5 text-start text-[18px] font-medium font-poppins mx-5">
               Ceramic Tea Set
             </div>
@@ -105,33 +235,15 @@ const Main = () => {
           </div>
         </div>
 
-        <div >
+        <div>
           <div className="  rounded-3xl my-8">
-              <Image
-                src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                height={100}
-                width={200}
-                alt="htf"
-                className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
-              />           
-            <div className="pt-5 text-start text-[18px] font-medium font-poppins mx-5">
-              Ceramic Tea Set
-            </div>
-            <div className="text-[18px] font-medium text-black text-opacity-60 text-start font-poppins mx-5">
-              $45.45
-            </div>
-          </div>
-        </div>
-
-        <div className="hidden lg:block">
-          <div className="  rounded-3xl my-8">
-              <Image
-                src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                height={100}
-                width={200}
-                alt="htf"
-                className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
-              />           
+            <Image
+              src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+              height={100}
+              width={200}
+              alt="htf"
+              className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
+            />
             <div className="pt-5 text-start text-[18px] font-medium font-poppins mx-5">
               Ceramic Tea Set
             </div>
@@ -143,13 +255,13 @@ const Main = () => {
 
         <div className="hidden lg:block">
           <div className="  rounded-3xl my-8">
-              <Image
-                src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                height={100}
-                width={200}
-                alt="htf"
-                className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
-              />           
+            <Image
+              src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+              height={100}
+              width={200}
+              alt="htf"
+              className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
+            />
             <div className="pt-5 text-start text-[18px] font-medium font-poppins mx-5">
               Ceramic Tea Set
             </div>
@@ -159,8 +271,23 @@ const Main = () => {
           </div>
         </div>
 
-
-
+        <div className="hidden lg:block">
+          <div className="  rounded-3xl my-8">
+            <Image
+              src="https://images.unsplash.com/photo-1607448885122-b3d4cf451587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+              height={100}
+              width={200}
+              alt="htf"
+              className="w-full h-auto rounded-xl shadow-xl shadow-green-200"
+            />
+            <div className="pt-5 text-start text-[18px] font-medium font-poppins mx-5">
+              Ceramic Tea Set
+            </div>
+            <div className="text-[18px] font-medium text-black text-opacity-60 text-start font-poppins mx-5">
+              $45.45
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
