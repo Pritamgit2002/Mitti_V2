@@ -3,6 +3,7 @@ import axios from "axios";
 import { data } from "autoprefixer";
 import Link from "next/link";
 import { BsPlus, BsEyeFill } from "react-icons/bs";
+import Image from "next/image";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
@@ -20,7 +21,7 @@ const Product = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-4 md:grid-rows-2 md:gap-x-24 mt-16">
       {/* itemValue having all api data  */}
-      {products.map((itemValue) => (
+      {products.map(key,(itemValue) => (
         <div className=" my-5 ">
           
           
@@ -28,7 +29,7 @@ const Product = () => {
               <div className="w-full h-full flex justify-center items-center">
                 {/* image */}
                 <div className="w-[200px] mx-auto flex justify-center items-center">
-                  <img
+                  <Image
                     className="max-h-[160px] group-hover:scale-110 transition duration-300"
                     src={itemValue.image}
                     alt=""

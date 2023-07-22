@@ -28,9 +28,8 @@ const navLinks = [
   },
 ];
 const Navbar = () => {
-
   const [nav, setNav] = useState(false);
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
@@ -51,12 +50,11 @@ const Navbar = () => {
             ))}
           </div>
 
-
           <div className="cursor-pointer flex relative">
-              <LiaShoppingCartSolid
-                className="text-[30px]"
-                onClick={() => setOpen(!open)}
-              />
+            <LiaShoppingCartSolid
+              className="text-[30px]"
+              onClick={() => setOpen(!open)}
+            />
           </div>
 
           {/* <div className={`bg-red-500 h-screen fixed right-0 top-0 ${open ? "w-72":"hidden"} relative`}>
@@ -70,6 +68,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       {/* Mobile Menu */}
       {/* Overlay */}
       <div
@@ -78,15 +77,17 @@ const Navbar = () => {
         }
       >
         {/* Side Drawer Menu */}
+
+
+
+
         <div
-          className={
-            nav
-              ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#C1DCDC] p-10 ease-in duration-500 z-50"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
-          }
+          className={`${
+            nav ? "left-0" : "-left-full"
+          }  bg-white fixed top-0 h-full shadow-2xl w-[100%] transition-all duration-500 z-20 px-4 py-8 overflow-x-hidden border-b`}
         >
           <div>
-            <div className="flex w-full items-center justify-between">
+            <div className="flex w-full items-center justify-between ">
               <Link href="/" className="font-dancing-script text-[22px]">
                 Mittikalakar
               </Link>
@@ -99,7 +100,7 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-600 my-4">
               <p className="w-[85%] md:w-[90%] py-4">
-                "Crafted with Passion, Celebrating Artistry"
+                Crafted with Passion, Celebrating Artistry
               </p>
             </div>
           </div>
@@ -111,7 +112,7 @@ const Navbar = () => {
                 className="py-8 text-[22px] font- flex"
               >
                 {links.title}
-                <Image src="/../public/doodle1.png" width={30} height={20} />
+                <Image src="/../public/doodle1.png" alt="pic" width={30} height={20} />
               </Link>
             ))}
             <div className="pt-40">
@@ -154,4 +155,5 @@ const Navbar = () => {
   );
 };
 
+//export default nav;
 export default Navbar;

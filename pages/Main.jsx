@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { FcRight } from "react-icons/fc";
 import Link from "next/link";
 import BsPlus from "react-icons/bs";
@@ -12,6 +11,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import pic2 from "../public/pic2.jpg";
+import React, { useState } from "react";
+import nav from "../components/Navbar.jsx"
+
 
 const DynamicIcon = dynamic(
   () => import("react-icons/bs").then((mod) => mod.BsPlus),
@@ -20,7 +22,12 @@ const DynamicIcon = dynamic(
   }
 );
 
-const Main = () => {
+const Main = ({nav}) => {
+  // const [pro, setPro] = useState(false);
+  // const handleNav = () => {
+  //   setPro(!pro);
+  // };
+  console.log(nav);
   return (
     <div className="mx-5 lg:mx-52 flex-col justify-center lg:mt-8">
       {/* <div className="bg-[#C1DCDC] rounded-2xl font-normal lg:flex ">
@@ -50,7 +57,7 @@ const Main = () => {
           />
         </div>
       </div> */}
-      <div className="">
+      <div className={nav ? "hidden" : ""}>
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           slidesPerView={1}
@@ -76,7 +83,7 @@ const Main = () => {
                   <div class="text-center text-white">
                     <h2 class="text-5xl font-bold">Timeless Treasures</h2>
                     <p class="text-lg mt-2">
-                      Discover the Beauty of Handcrafted Pottery."
+                      Discover the Beauty of Handcrafted Pottery.
                     </p>
                   </div>
                 </div>
